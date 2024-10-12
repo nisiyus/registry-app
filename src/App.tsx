@@ -1,6 +1,7 @@
 import { Detail } from "@pages/detail/Detail";
 import { detailLoader } from "@pages/detail/detailLoader";
-import { Home } from "@pages/Home";
+import { Home } from "@pages/home/Home";
+import { homeLoader } from "@pages/home/homeLoader";
 import { Root } from "@pages/Root";
 import { Search } from "@pages/search/Search";
 import { searchLoader } from "@pages/search/searchLoader";
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        loader: homeLoader,
       },
       {
         path: "/search",
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 const App = () => {
   return <RouterProvider router={router} />;
 };

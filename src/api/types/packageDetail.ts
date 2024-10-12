@@ -9,6 +9,6 @@ export interface PackageDetails {
     maintainers:{
         email:string;
         name:string;
-    }
+    }[]
     license:string;
 }
