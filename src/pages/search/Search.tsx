@@ -4,8 +4,8 @@ import { PackageListItem } from "@components/PackageListItem";
 
 export const Search = () => {
   const { searchResults } = useLoaderData() as SearchLoaderResult;
-  const renderedResults = searchResults.map((result) => {
-    return <PackageListItem pack={result} key={result.name} />;
+  const renderedResults = searchResults.map((result, index) => {
+    return <PackageListItem pack={result} key={index} />;
   });
 
   return (

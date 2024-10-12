@@ -1,4 +1,5 @@
-import { Detail } from "@pages/Detail";
+import { Detail } from "@pages/detail/Detail";
+import { detailLoader } from "@pages/detail/detailLoader";
 import { Home } from "@pages/Home";
 import { Root } from "@pages/Root";
 import { Search } from "@pages/search/Search";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/packages/:name",
         element: <Detail />,
+        loader: detailLoader,
       },
     ],
   },

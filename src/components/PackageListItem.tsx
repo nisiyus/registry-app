@@ -6,9 +6,9 @@ interface PackageListItemProps {
 }
 
 export const PackageListItem: React.FC<PackageListItemProps> = ({ pack }) => {
-  const renderedKeywords = (pack.keywords || []).map((keyword) => {
+  const renderedKeywords = (pack.keywords || []).map((keyword, index) => {
     return (
-      <div key={keyword} className="border py-0.5 px-1 text-xs bg-slate-200 rounded">
+      <div key={index} className="border py-0.5 px-1 text-xs bg-slate-200 rounded">
         {keyword}
       </div>
     );
